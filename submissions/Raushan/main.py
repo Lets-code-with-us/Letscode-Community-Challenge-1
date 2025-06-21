@@ -15,8 +15,8 @@ def main():
     st.title("📊 India Growth Metrics Dashboard")
     st.markdown("---")  # Horizontal separator
 
-    # Load dataset 
-    df = load_data("india_city_growth_metrics_mock_data.csv")
+    # Load dataset
+    df = load_data("./india_city_growth_metrics_mock_data.csv")
 
     # Apply sidebar filters and retrieve filtered dataframe and other filter info
     filtered_df, metrics, cities, year_range = sidebar_filters(df)
