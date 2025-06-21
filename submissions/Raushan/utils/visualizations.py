@@ -187,18 +187,18 @@ def show_visualizations(df: pd.DataFrame):
             )
         ]
 
-    # Select cities and year for visualization filtering
+    # Select cities (common for all graphs)
     vis_cities = st.multiselect(
         "Select City/Cities",
         sorted(df["City"].unique()),
         default=[df["City"].unique()[0]],
     )
-    vis_year = st.selectbox("Select Year", sorted(df["Year"].unique()))
 
-    # Filter dataframe accordingly
-    df_vis = df[(df["Year"] == vis_year) & (df["City"].isin(vis_cities))]
+    if graph_type != "Line Graph":
+        vis_year = st.selectbox("Select Year", sorted(df["Year"].unique()))
+        df_vis = df[(df["Year"] == vis_year) & (df["City"].isin(vis_cities))]
 
-    # Call the corresponding plotting function based on user selection
+    # Plot based on graph type
     if graph_type == "Bar Chart":
         plot_bar_chart(df_vis, vis_metrics, vis_year)
     elif graph_type == "Line Graph":
