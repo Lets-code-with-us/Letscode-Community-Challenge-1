@@ -1,12 +1,7 @@
+# utils/data_loader.py
 import pandas as pd
 import streamlit as st
 
-
-# Loading file
 @st.cache_data
-def load_data(path):
+def load_data(path: str) -> pd.DataFrame:
     return pd.read_csv(path)
-
-
-with st.spinner("Loading data..."):
-    df = load_data("india_city_growth_metrics_mock_data.csv")
