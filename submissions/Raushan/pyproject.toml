@@ -1,0 +1,12 @@
+[project]
+name = "taks1"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "plotly>=6.1.2",
+    "scikit-learn>=1.7.0",
+    "seaborn>=0.13.2",
+    "streamlit>=1.46.0",
+]
