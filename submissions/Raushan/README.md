@@ -4,7 +4,7 @@ _Submitted by: Raushan Bhanu_
 
 ## 🌟 Live Demo
 
-🔗 **[View Live Demo](https://your-demo-link-here.com)**
+🔗 **[View Live Demo](india-growth-metrics-dashboard.streamlit.app)**
 
 ## 📸 Screenshots
 
